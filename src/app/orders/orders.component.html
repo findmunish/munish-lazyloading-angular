@@ -1,0 +1,24 @@
+<div class="card-body">
+	<h4>Order Details</h4>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Customer</th>
+        <th>Date</th>
+        <th>Mode of Delivery</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let order of orders">
+				<td>{{order.id}}</td>
+				<td>{{order.customerName}}</td>
+        <td>{{order.date}}</td>
+        <td>{{order.mode}}</td>
+			</tr>
+			<tr *ngIf="!orders.length">
+				<td colspan="4">No Order(s) found</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
